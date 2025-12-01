@@ -1,2 +1,2 @@
 # DSA
-Practice on dsa
+Practice on DSA problems 
