@@ -15,27 +15,27 @@ public class Lt1590{
 class Solution {
     public int minSubarray(int[] nums, int p) {
         long total = 0;
-        for (int x : nums) total += x;
+        for (int x : nums) total += x;                      // total sum
 
         int rem = (int)(total % p);
-        if (rem == 0) return 0; // already divisible
+        if (rem == 0) return 0;                             // already divisible
 
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0, -1);  // prefix before starting
+        map.put(0, -1);                                     // prefix before starting
 
         long prefix = 0;
         int ans = nums.length;
 
         for (int j = 0; j < nums.length; j++) {
-            prefix = (prefix + nums[j]) % p;
+            prefix = (prefix + nums[j]) % p;              // current prefix mod p
 
-            int needed = (int)((prefix - rem + p) % p);
+            int needed = (int)((prefix - rem + p) % p);   // needed prefix to make subarray divisible
 
-            if (map.containsKey(needed)) {
-                ans = Math.min(ans, j - map.get(needed));
+            if (map.containsKey(needed)) {                // if already have needed prefix
+                ans = Math.min(ans, j - map.get(needed));    
             }
 
-            map.put((int)prefix, j);
+            map.put((int)prefix, j);                      // store current prefix mod p with index
         }
 
         return ans == nums.length ? -1 : ans;
