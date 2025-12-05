@@ -1,6 +1,6 @@
 Sliding Window :
 
-lt1652 ( E ) , lt219 ( E ) , lt1876 ( E )
+lt1652 ( E ) , lt219 ( E ) , lt1876 ( E ) , lt1984 ( E )
 
 
 Strings:
