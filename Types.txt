@@ -1,3 +1,8 @@
 Sliding Window :
 
-lt1652 , lt219
+lt1652 ( E ) , lt219 ( E ) , lt1876 ( E )
+
+
+Strings:
+
+lt1763 ( E ) , lt1876 ( E )
